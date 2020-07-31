@@ -1,0 +1,26 @@
+ <section id="add" class="container">
+    <div class="form-wrap">
+      {{#each errors}}
+      <div class="error">
+        <p>{{text}}</p>
+      </div>
+      {{/each}}
+      <form action="/utilisateurs/add">
+        <div class="input-group">
+          <label for="title">Type</label>
+          <input type="text" name="types" id="types" class="types" placeholder="eg. Small Wordpress website, React developer"
+            maxlength="100" value={{types}}>
+        </div>
+        <div class="input-group">
+          <label for="technologies">Name</label>
+          <input type="text" name="prenom" id="technologies" class="input-box" placeholder="eg. javascript, react, PHP"
+          maxlength="100" value={{prenom}}>
+        </div>
+        <div class="input-group">
+          <label for="modifiers">Modifiers</label>
+          <input type="number" name="modifiers" id="modifiers" class="input-box" placeholder="eg. 500, 5000, 10000" value={{modifiers}}>
+        </div>
+        <input type="submit" value="Add Gig" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>

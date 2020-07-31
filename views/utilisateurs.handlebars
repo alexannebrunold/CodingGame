@@ -1,0 +1,24 @@
+<template>
+	<div>
+		<h1>Ludus</h1>
+		<section id="utilisateurs" class="container">
+			<h1>Choisit tes types pour le combat LUDUS</h1>
+{{#each utilisateur}}
+			<div class="utilisateur" v-for="(utilisateur, index) in utilisateurs" :key="index">
+				<input type="checkbox" id="" name="" value="{{this.types}}" />
+				<label for="{{this.types}}">{{ this.types }}</label>
+		
+				<br />
+
+				<h2>{{ this.types }}</h2>
+
+				<h3>{{ this.prenom }}</h3>
+				<ul>
+					<li>{{ modifiers }}</li>
+				</ul>
+			</div>
+				   {{/each}}
+			<button>Send</button>
+		</section>
+	</div>
+</template>
